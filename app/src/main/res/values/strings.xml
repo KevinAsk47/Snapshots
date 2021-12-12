@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Snapshots</string>
+    <string name="item_home_tittle">Home</string>
+    <string name="item_home_add">Crear</string>
+    <string name="item_home_profile">Perfil</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="deleteButton">Delete Button</string>
+    <string name="image_item">Imagen item</string>
+    <string name="post_message_title">Seleccione una imagen</string>
+    <string name="post_message_valid_title">Por favor, añade un titulo!</string>
+</resources>

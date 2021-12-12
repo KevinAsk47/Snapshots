@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="Default">16dp</dimen>
+    <dimen name="img_hight">160dp</dimen>
+    <dimen name="middle">24dp</dimen>
+    <dimen name="high_Card">200dp</dimen>
+    <dimen name="photo">40dp</dimen>
+    <dimen name="minDp">8dp</dimen>
+    <dimen name="lenghtInput">20dp</dimen>
+    <dimen name="imageView">88dp</dimen>
+    <dimen name="standartImg">48dp</dimen>
+</resources>

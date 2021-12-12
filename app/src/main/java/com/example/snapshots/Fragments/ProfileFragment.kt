@@ -1,0 +1,45 @@
+package com.example.snapshots.Fragments
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
+import com.example.snapshots.databinding.FragmentProfileBinding
+import com.firebase.ui.auth.AuthUI
+import com.google.firebase.auth.FirebaseAuth
+
+
+class ProfileFragment : Fragment() {
+
+    private lateinit var mBinding: FragmentProfileBinding
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?): View? {
+        mBinding = FragmentProfileBinding.inflate(inflater, container, false)
+        return mBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val user = FirebaseAuth.getInstance().currentUser
+
+        user?.let {
+            mBinding.tvName.text = it.displayName
+            mBinding.tvEmail.text = it.email
+            mBinding.btnLogOut.setOnClickListener {logOut()}
+        }
+    }
+
+    private fun logOut() {
+        context?.let {
+            AuthUI.getInstance()
+                .signOut(it)
+                .addOnCompleteListener {
+                    Toast.makeText(context, "gracias por usar kevinAp! vuelva pronto", Toast.LENGTH_SHORT).show()
+                }
+        }
+    }
+}
